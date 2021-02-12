@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/iconfont.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/blog.css">
+    
+
+</head>
+<body>
+    <div id="blog">
+        <nav-box></nav-box>
+       
+        <main>
+            <div class="bgcImg">
+                <p class="title">{{item.title}}</p>
+                <div class="desc">
+                    <div class="author">
+                        <span class="iconfont" id="icon" style="font-size: 18px;
+            ">&#xe7e5;</span>
+                       {{item.author}}
+                    </div>
+                    <div class="date">
+                        <span class="iconfont" id="icon" style="font-size: 16px;
+            ">&#xe714;</span>
+            {{item.date}}
+                    </div>
+                    <div class="type">
+                        <span class="iconfont" id="icon" style="font-size: 18px;
+            ">&#xe61e;</span>
+            {{item.type}}
+                    </div>
+                </div>
+            </div>
+            <article>
+                <h1>sldjflk1</h1>
+            </article>
+            <div class="cmt"></div>
+        </main>
+        <footer></footer>
+    </div>
+    <script src="/js/vue.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="/js/blog.js"></script>
+    
+</body>
+</html>

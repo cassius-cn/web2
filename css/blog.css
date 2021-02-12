@@ -1,0 +1,67 @@
+main{
+    width: 100%;
+}
+body{
+    background-color: #F6F8F9;
+}
+/* 标题背景图片 */
+
+.bgcImg{
+    width: 100vw;
+    height: 500px;
+    background: url(/static/imgs/background1.jpg) no-repeat center center;
+    background-size: cover;
+    animation: arise 0.5s ease-in 0s 1;
+    opacity: 0;
+    animation-fill-mode:forwards;
+
+}
+.bgcImg p.title{
+    position: relative;
+    top: 180px;
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+}
+.bgcImg .desc{
+    position: relative;
+    top: 190px;
+    display: flex;
+    justify-content: center;
+}
+.bgcImg .desc div{
+    padding: 10px 20px;
+    color: #fff;
+}
+/* 标题背景图片end */
+article{
+    width: 1000px;
+    height: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 30px;
+}
+article:hover{
+    box-shadow:0 0 5px 8px #f0f0f0;
+}
+
+@keyframes slideout{
+    from{
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes arise{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

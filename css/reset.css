@@ -1,0 +1,33 @@
+body,p,ul,ol,dl,dt{
+    margin:0;
+    padding:0;
+}
+ul,ol{
+    list-style:none;
+}
+input{
+    border:none;
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+/* 滚动条 */
+body::-webkit-scrollbar{
+    width: 6px;
+    height: 1px;
+}
+body::-webkit-scrollbar-thumb{
+
+    background: #2F9CF1;
+}
+body::-webkit-scrollbar-track{
+    background: #fff;
+}
+/* 滚动条end */
+*{
+    box-sizing: border-box;
+}

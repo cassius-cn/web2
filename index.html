@@ -1,12 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>导航页</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <script src="js/vue.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/nav.js"></script>
 </head>
+
 <body>
-    
+    <div id="main">
+        <nav-box></nav-box>
+        <main>
+            <div class="home-bgc">
+                <p>Act</p>
+                <p>Stay hungry, stay foolish.</p>
+            </div>
+            <div class="frame">
+                <div class="home-main">
+                    <article>                     
+                        <section v-for="item in nowBlog">
+                            <h2>{{item.title}}</h2>
+                            <div class="imgCtn">
+                                <img :src="item.coverImg" alt="">
+                            </div>
+                            <hr>
+                            <div class="desc">
+                                <div class="author">
+                                    <span class="iconfont" id="icon" style="font-size: 16px;
+                        ">&#xe7e5;</span>
+                                    {{item.author}}
+                                </div>
+                                <div class="date">
+                                    <span class="iconfont" id="icon" style="font-size: 14px;
+                        ">&#xe714;</span>
+                        {{item.date}}
+                                </div>
+                                <div class="type">
+                                    <span class="iconfont" id="icon" style="font-size: 16px;
+                        ">&#xe61e;</span>
+                        {{item.type}}
+                                </div>
+                            </div>
+                        </section>
+                        <div class="chgPage">
+                            <ul>
+                                <li  v-bind:class="{'hidden':curPage == 1}"  @click="chgPage(-1)">
+                                    <span>上一页</span>
+                                </li>
+                                <li v-for="index in indexs"  v-bind:class="{'active':curPage == index}" @click="chgPage(index)"><span>{{index}}</span></li>
+                                <li v-bind:class="{'hidden':curPage === pageNum}"  @click="chgPage(-2)">
+                                    <span>下一页</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                    <aside>
+                        <div id="nav-aside">
+
+                        </div>
+                    </aside>
+                </div>
+            </div>
+
+        </main>
+        <footer>
+            <div>
+                <span class="iconfont" id="icon" style="font-size: 20px;color: #7F7F7F;
+                ">&#xe600;</span>
+                <a href="mailto:1093633442@qq.com" style="color: #2F9CF1;padding: 5px;">Email:1093633442@qq.com</a>
+            </div>
+            <div>
+                <span class="iconfont" id="icon" style="font-size: 20px; color: #7F7F7F;padding: 5px;
+            ">&#xe62b;</span>
+            <span style="font-size: 16px;color: #2F9CF1;">备案号：京ICP备19044452号</span>
+            </div>
+        </footer>
+    </div>
+    <script src="js/index.js"></script>
 </body>
 </html>
