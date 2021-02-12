@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="css/nav.css">
     <script src="js/vue.js"></script>
     <script src="js/jquery.min.js"></script>
-    <script src="js/nav.js"></script>
 </head>
 
 <body>
@@ -27,7 +26,7 @@
                 <div class="home-main">
                     <article>                     
                         <section v-for="item in nowBlog">
-                            <h2>{{item.title}}</h2>
+                            <h2><a :href="item.blogUrl">{{item.title}}</a></h2>
                             <div class="imgCtn">
                                 <img :src="item.coverImg" alt="">
                             </div>
@@ -46,7 +45,7 @@
                                 <div class="type">
                                     <span class="iconfont" id="icon" style="font-size: 16px;
                         ">&#xe61e;</span>
-                        {{item.type}}
+                        <a :href="item.typeUrl">{{item.type}}</a>
                                 </div>
                             </div>
                         </section>
@@ -84,6 +83,7 @@
             </div>
         </footer>
     </div>
-    <script src="js/index.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="/js/index.js"></script>
 </body>
 </html>

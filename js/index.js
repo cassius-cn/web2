@@ -1,25 +1,11 @@
-// 侧边栏滚动控制
-let asideTop = 490; //侧边栏距顶部高度
-let pageBtm = 780; //侧边栏停止时底部高度
-window.onscroll = function () {
-    if ($(document).scrollTop() >= asideTop && ($(document).height() - $(document).scrollTop()) > pageBtm) {
-        $("#nav-aside").css({ "top": $(document).scrollTop() - asideTop + 'px' });
-    }
-    else if (($(document).height() - $(document).scrollTop()) <= pageBtm) {
-        $("#nav-aside").css({ "top": $(document).height() - pageBtm - asideTop + 'px' });
-    }
-    else {
-        $("#nav-aside").css({ "top": 0 + 'px' });
-    }
-}
 
-const web = new Vue({
+let web = new Vue({
     el: "#main",
     data: {
         nowBlog: [],
         allBlog:[],
-        curPage: 2,
-        onePageNum: 2,
+        curPage: 1,
+        onePageNum: 3,
         pageNum: 0,
         indexs:[]
         },
@@ -97,7 +83,7 @@ const web = new Vue({
                     };
                     that.allBlog = that.allBlog.sort(compare);
                     that.chgPage(0);
-
+            
                 }
             })
         });

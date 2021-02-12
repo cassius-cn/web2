@@ -22,30 +22,125 @@ body{
     font-size: 36px;
     color: #fff;
     text-align: center;
+    opacity: 0;
+    animation: slideout 0.5s ease-in 0.3s 1;
+    animation-fill-mode:forwards;
 }
 .bgcImg .desc{
     position: relative;
-    top: 190px;
+    top: 200px;
     display: flex;
     justify-content: center;
+    opacity: 0;
+    animation: slideout 0.5s ease-in 0.5s 1;
+    animation-fill-mode:forwards;
+
 }
 .bgcImg .desc div{
     padding: 10px 20px;
     color: #fff;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+.bgcImg .desc div span{
+    display: inline-block;
+    padding: 4px 6px;
 }
 /* 标题背景图片end */
+
+/* 文章 */
+
 article{
     width: 1000px;
-    height: 1000px;
     margin: 0 auto;
     padding: 30px;
     background-color: #fff;
-    margin-top: 20px;
-    border-radius: 30px;
+    margin-top: 40px;
+    opacity: 0;
+    animation: slideout 0.5s ease-in 0.2s 1;
+    animation-fill-mode:forwards;
+
 }
 article:hover{
     box-shadow:0 0 5px 8px #f0f0f0;
 }
+
+/* 文章end */
+/* 评论区 */
+.cmt{
+    width: 1000px;
+    margin: 30px auto;
+    opacity: 0;
+    animation: slideout 0.5s ease-in 0.2s 1;
+    animation-fill-mode:forwards;
+}
+.cmt .write{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+}
+.cmt .write:hover{
+    box-shadow:0 0 5px 8px #f0f0f0;
+}
+
+.cmt .write img{
+    vertical-align: -22px;
+}
+.cmt .write h2{
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+    color: #9b59b6;
+    border-bottom: 1px solid #2F9CF1;
+}
+
+.cmt .blogMsgs{
+    margin: 30px 0;
+    padding: 30px;
+    background-color: #fff;
+
+}
+.cmt .blogMsgs:hover{
+    box-shadow:0 0 5px 8px #f0f0f0;
+}
+.cmt .blogMsgs .msg{
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #bebebe;
+}
+.cmt .blogMsgs .msg .top{
+    display: flex;
+    align-items: center;
+}
+.cmt .blogMsgs .msg .top .left img{
+    width: 60px;
+    display: block;
+    border-radius: 30px;  
+    box-shadow:0 0 5px 3px #f0f0f0;
+
+}
+.cmt .blogMsgs .msg .top .right{
+    padding: 0px 10px;
+}
+.cmt .blogMsgs .msg .top .right .name{
+    font-size: 20px;
+    color: #2F9CF1;
+    padding-bottom: 8px;
+
+}
+.cmt .blogMsgs .msg .top .right .date{
+    font-size: 12px;
+    color: #9c9c9c;
+}
+.cmt .blogMsgs .msg .bottom{
+    padding: 10px 20px;
+    font-size: 20px;
+    padding-top: 30px;
+}
+/* 评论区end */
 
 @keyframes slideout{
     from{

@@ -73,7 +73,7 @@ nav .right .nav-home{
     margin: 5px 0px;
 }
 
-nav .right .nav-home span:nth-child(1){
+nav .right .nav-home  span:nth-child(1){
     font-size: 18px;
     color: #444;
 }

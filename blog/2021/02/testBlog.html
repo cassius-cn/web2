@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="/css/iconfont.css">
     <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/blog.css">
-    
 
 </head>
 <body>
@@ -25,29 +24,76 @@
             ">&#xe7e5;</span>
                        {{item.author}}
                     </div>
-                    <div class="date">
-                        <span class="iconfont" id="icon" style="font-size: 16px;
-            ">&#xe714;</span>
-            {{item.date}}
-                    </div>
+                    
                     <div class="type">
                         <span class="iconfont" id="icon" style="font-size: 18px;
             ">&#xe61e;</span>
             {{item.type}}
+                    </div>
+                    <div class="date">
+                        <span class="iconfont" id="icon" style="font-size: 16px;
+            ">&#xe714;</span>
+            {{item.date}}
                     </div>
                 </div>
             </div>
             <article>
                 <h1>sldjflk1</h1>
             </article>
-            <div class="cmt"></div>
+            <div class="cmt">
+                
+                <div class="blogMsgs">
+                    <div class="msg"  v-for="item in msgs">
+                        <div class="top">
+                            <div class="left">
+                                <img :src="item.imgUrl" alt="">
+                            </div>
+                            <div class="right">
+                                <p class="name">{{item.username}}</p>
+                                <p class="date">{{item.date}}</p>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            {{item.content}}
+                        </div>
+                    </div>
+                </div>
+                <div class="write">
+                    <h2>发表你的看法</h2>
+                    <el-form ref="form" :model="form" label-width="80px">
+                        <el-form-item label="你的称呼">
+                          <el-input v-model="form.username"></el-input>
+                        </el-form-item>
+                        <el-form-item label="头像选择">
+                          <el-radio-group v-model="form.imgUrl" style="display: flex;align-items: baseline;">
+                            <el-radio label="/static/imgs/headImg1.jpg"><img src="/static/imgs/headImg1.jpg" alt="" width="50px"></el-radio>
+                            <el-radio label="/static/imgs/headImg2.jpg"><img src="/static/imgs/headImg2.jpg" alt="" width="50px"></el-radio>
+                            <el-radio label="/static/imgs/headImg3.jpg"><img src="/static/imgs/headImg3.jpg" alt="" width="50px"></el-radio>
+                            <el-radio label="/static/imgs/headImg4.jpg"><img src="/static/imgs/headImg4.jpg" alt="" width="50px"></el-radio>
+                            <el-radio label="/static/imgs/headImg5.jpg"><img src="/static/imgs/headImg5.jpg" alt="" width="50px"></el-radio>
+                            <el-radio label="/static/imgs/headImg6.jpg"><img src="/static/imgs/headImg6.jpg" alt="" width="50px"></el-radio>
+                          </el-radio-group>
+                        </el-form-item>
+                        <el-form-item label="你的留言">
+                          <el-input type="textarea" v-model="form.content"></el-input>
+                        </el-form-item>
+                        <el-form-item style="text-align:right;">
+                          <el-button type="primary" :disabled="canSub" id="subBtn" @click="doSubmit">发表</el-button>
+                        </el-form-item>
+                      </el-form>
+                </div>
+            </div>
         </main>
         <footer></footer>
     </div>
+    <script src="/js/myJs.js"></script>
     <script src="/js/vue.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/nav.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/js/blog.js"></script>
     
 </body>
