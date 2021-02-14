@@ -4,7 +4,7 @@ nav{
     top: 0;
     width: 100%;
     height: 60px;
-    background-color:rgba(250,250,250,0.2);
+    background-color:rgba(250,250,250,0.5);
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -39,6 +39,17 @@ nav .right .btn-theme{
     height: 40px;
     text-align: center;
     line-height: 40px;
+    position: relative;
+}
+nav .right .btn-theme .box{
+    position: absolute;
+    width: 100px;
+    top: 44px;
+    left: -20px;
+    border: 1px solid green;
+}
+nav .right .btn-theme .hidden{
+    display: none;
 }
 nav .right .btn-theme span{
     color: #444;

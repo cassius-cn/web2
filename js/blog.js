@@ -71,11 +71,14 @@ let blog = new Vue({
         let that = this;
         window.addEventListener('pageshow', function () {
             $.ajax({
-                url: "/js/blog.json",
+                url: "/js/json/blog.json",
                 type: "GET",
                 dataType: "json",
                 success: function (data) {
-                    let allBlog = data.read.concat(data.daily, data.study, data.other);
+                    let allBlog = [];
+                    for(let item in data){
+                        allBlog = allBlog.concat(data[item]);
+                    }
                     const compare = function (obj1, obj2) {
                         var val1 = obj1.uid;
                         var val2 = obj2.uid;

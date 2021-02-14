@@ -1,48 +1,25 @@
-let web = new Vue({
-    el: "#main",
+const blog = new Vue({
+    el: "#blog",
     data: {
-        nowBlog: [],
-        allBlog: [],
-        curPage: 1,
-        onePageNum: 5,
-        pageNum: 0,
-        indexs: [],
         types: [], //分类的标签集合
         allBlogArr: [], //所有博客 allBlogArr[0]为日常所有
-        links: [{
-                    "title": "百度一下,你就知道",
-                    "url": "https://baidu.com"
-                },
-                {
-                    "title": "百度知道",
-                    "url": "https://baidu.com"
-                },
-                {
-                    "title": "百度一道fdsf",
-                    "url": "https://baidu.com"
-                },
-                {
-                    "title": "百度一下知道",
-                    "url": "https://baidu.com"
-                },
-                {
-                    "title": "百度一道fdsf",
-                    "url": "https://baidu.com"
-                },
-                {
-                    "title": "百度一下知道",
-                    "url": "https://baidu.com"
-                }
-            ] //友链
+        typeIndex: 0,
+        curPage: 1,
+        onePageNum: 4,
+        pageNum: 0,
+        indexs: [],
+        nowBlog: [] //显示的所有 
+    },
+    computed: {
+        allBlog: function () { // 选中标签的所有 即为allBlogArr[0]
+            return this.allBlogArr[this.typeIndex];
+        }
     },
     methods: {
-        chgUrl(index) {
-            if (index != this.typeIndex) {
+        chgUrl(index){
+            if(index != this.typeIndex){
                 location.href = "/blogSort.html?" + index;
             }
-        },
-        chgUrlLink(url) {
-            location = url;
         },
         setIndexs() {
             this.pageNum = Math.ceil(this.allBlog.length / this.onePageNum);
@@ -82,21 +59,22 @@ let web = new Vue({
                 }
                 this.indexs = arr;
             }
+
         },
         chgPage(index) {
             if (index === -1) {
                 this.curPage--;
                 index = this.curPage;
-                document.body.scrollTop = document.documentElement.scrollTop = 490;
+                document.body.scrollTop = document.documentElement.scrollTop = 250;
             } else if (index === -2) {
                 this.curPage++;
                 index = this.curPage;
-                document.body.scrollTop = document.documentElement.scrollTop = 490;
+                document.body.scrollTop = document.documentElement.scrollTop = 250;
             } else if (index === 0) {
                 index = this.curPage;
             } else {
                 this.curPage = index;
-                document.body.scrollTop = document.documentElement.scrollTop = 490;
+                document.body.scrollTop = document.documentElement.scrollTop = 250;
             }
 
             this.setIndexs();
@@ -104,42 +82,29 @@ let web = new Vue({
         }
 
     },
-    mounted: function() {
+    mounted: function () {
         //设置主页导航栏为蓝色
-        let btnHome = document.querySelector(".nav-home");
-        btnHome.children[0].style.color = "#2F9CF1";
-        btnHome.children[1].style.color = "#2F9CF1";
+        let btnBlog = document.querySelector(".nav-blog");
+        btnBlog.children[0].style.color = "#2F9CF1";
+        btnBlog.children[1].style.color = "#2F9CF1";
         //加载json
         let that = this;
-        window.addEventListener('pageshow', function() {
+        if(location.href.split("?")[1] != undefined)
+        that.typeIndex = location.href.split("?")[1];
+        window.addEventListener('pageshow', function () {
             $.ajax({
                 url: "/js/json/blog.json",
                 type: "GET",
                 dataType: "json",
-                success: function(data) {
-                    let allBlog = [];
+                success: function (data) {
                     for (let item in data) {
                         that.types = that.types.concat(item);
                         that.allBlogArr.push(data[item]);
-                        allBlog = allBlog.concat(data[item]);
-                        that.typeNum++;
                     }
-                    const compare = function(obj1, obj2) {
-                        var val1 = obj1.date;
-                        var val2 = obj2.date;
-                        if (val1 < val2) {
-                            return 1;
-                        } else if (val1 > val2) {
-                            return -1;
-                        } else {
-                            return 0;
-                        }
-                    };
-                    that.allBlog = allBlog.sort(compare);
                     that.chgPage(0);
-
                 }
             })
         });
+
     }
 })

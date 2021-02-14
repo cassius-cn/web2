@@ -1,33 +1,55 @@
-body,p,ul,ol,dl,dt{
-    margin:0;
-    padding:0;
+body,
+p,
+ul,
+ol,
+dl,
+dt {
+    margin: 0;
+    padding: 0;
 }
-ul,ol{
-    list-style:none;
+
+ul,
+ol {
+    list-style: none;
 }
-input{
-    border:none;
+
+input {
+    border: none;
     outline: none;
 }
-a{
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:link,
+a:focus {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    background: none;
     text-decoration: none;
 }
-a:hover{
-    text-decoration: none;
-}
+
+
 /* 滚动条 */
-body::-webkit-scrollbar{
+
+body::-webkit-scrollbar {
     width: 6px;
     height: 1px;
 }
-body::-webkit-scrollbar-thumb{
 
+body::-webkit-scrollbar-thumb {
     background: #2F9CF1;
 }
-body::-webkit-scrollbar-track{
+
+body::-webkit-scrollbar-track {
     background: #fff;
 }
+
+
 /* 滚动条end */
-*{
+
+* {
     box-sizing: border-box;
 }

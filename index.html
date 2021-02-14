@@ -8,10 +8,10 @@
     <title>导航页</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/lib/iconfont.css">
     <link rel="stylesheet" href="css/nav.css">
-    <script src="js/vue.js"></script>
-    <script src="js/jquery.min.js"></script>
+    <script src="js/lib/vue.js"></script>
+    <script src="js/lib/jquery.min.js"></script>
 </head>
 
 <body>
@@ -30,7 +30,6 @@
                             <div class="imgCtn">
                                 <img :src="item.coverImg" alt="">
                             </div>
-                            <hr>
                             <div class="desc">
                                 <div class="author">
                                     <span class="iconfont" id="icon" style="font-size: 16px;
@@ -63,8 +62,42 @@
                     </article>
                     <aside>
                         <div id="nav-aside">
-
+                            <div class="img">
+                                <img src="/static/imgs/headImg2.jpg" alt="">
+                            </div>
+                            <p>Cassius</p>
+                            <div class="num">
+                                <div class="blogNum">
+                                    <div>{{allBlog.length}}</div>
+                                    <div>文章</div>
+                                </div>
+                                <div class="type">
+                                    <div>{{types.length}}</div>
+                                    <div>分类</div>
+                                </div>
+                            </div>
+                            <div class="sort">
+                                <div class="desc">
+                                    <span class="iconfont" id="icon" style="font-size: 20px;color: #7F7F7F;
+                                    ">&#xe61e;</span> 分类
+                                </div>
+                                <section v-for="item,index in types" @click="
+                                chgUrl(index)"><span>{{item}}</span><span>{{allBlogArr[index].length}}</span></section>
+                            </div>
+                            <div class="link">
+                                <div class="desc">
+                                    <span class="iconfont" id="icon" style="font-size: 20px;color: #7F7F7F;
+                                    ">&#xe6ec;</span> 友链
+                                </div>
+                                <div class="linkCtn">
+                                    <section v-for="item in links" @click="chgUrlLink(item.url)">
+                                        <span></span>
+                                        <span>{{item.title}}</span>
+                                    </section>
+                                </div>
+                            </div>
                         </div>
+                        
                     </aside>
                 </div>
             </div>

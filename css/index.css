@@ -6,7 +6,7 @@
 main .home-bgc{
     width: 100vw;
     height: 540px;
-    background: url(/static/imgs/background1.jpg) no-repeat center center;
+    background: url(/static/imgs/background4.jpg) no-repeat center center;
     background-size: cover;
     animation: arise 0.5s ease-in 0s 1;
     animation-fill-mode:forwards;
@@ -121,13 +121,11 @@ main .home-bgc p:nth-child(1){
         max-height: 340px;
     }
 
-    article section hr{
-        color: #2F9CF1;
-    }
     article section .desc{
         width: 100%;
         display: flex;
-        padding-bottom: 5px;
+        border-top: 1px dashed #838383;
+        padding: 15px;
     }
     article section .desc div:nth-child(n){
         margin-right: 20px;
@@ -196,16 +194,137 @@ main .home-bgc p:nth-child(1){
     }
     aside #nav-aside{
         width: 100%;
-        height: 600px;
         position: relative;
         top:0;
         opacity: 0;
         animation:slideout 0.3s ease-in 0.5s 1;
         animation-fill-mode:forwards;
         box-shadow:0 0 5px 1px #c4c3c3;
+        padding: 0px 15px;
     }
     aside #nav-aside:hover{
         box-shadow:0 0 5px 3px #c4c3c3;
+    }
+    aside #nav-aside .img{
+        height: 160px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    aside #nav-aside .img img{
+        width: 100px;
+        border-radius: 50px;
+    }
+    aside #nav-aside p{
+        text-align: center;
+        font-size: 22px;
+        color: rgb(0, 0, 0);
+    }
+    aside #nav-aside .num{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px dashed #b4b4b4;
+    }
+    aside #nav-aside .num .blogNum{
+        width: 130px;
+        border-right: 1px solid #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+    }
+    aside #nav-aside .num .blogNum div:nth-child(1){
+        font-size: 20px;
+    }
+    aside #nav-aside .num .blogNum div:nth-child(2){
+        color: #525252;
+        font-size: 14px;
+    }
+    aside #nav-aside .num .type{
+        width: 130px;
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    aside #nav-aside .num .type div:nth-child(1){
+        font-size: 20px;
+    }aside #nav-aside .num .type div:nth-child(2){
+        color: #525252;
+        font-size: 14px;
+    }
+    aside #nav-aside .sort .desc{
+        color: #7F7F7F;
+        margin: 20px 0;
+    }
+    aside #nav-aside .sort section{
+        margin: 10px auto;
+        width: 280px;
+        padding: 10px; 
+        box-shadow:0 0 5px 1px #c4c3c3;
+        border-radius: 3px;
+        color: #2F9CF1;
+        display: flex;
+        justify-content: space-between;
+    }
+    aside #nav-aside .sort section:hover{
+        width: 300px;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+    aside #nav-aside .sort section span:nth-child(2){
+        text-align: center;
+        color: #fff;
+        width: 25px;
+        background-color: #2ecc71;
+        border-radius: 1px;
+    }
+    aside #nav-aside .sort section:nth-child(4n+3) span:nth-child(2) {
+        background-color: #fad749;
+    }
+    aside #nav-aside .sort section:nth-child(4n+4) span:nth-child(2) {
+        background-color: #e74c3c;
+    }
+    aside #nav-aside .sort section:nth-child(4n+5) span:nth-child(2) {
+        background-color: #9b59b6;
+    }
+    aside #nav-aside .link{
+        padding-bottom: 30px;
+    }
+    aside #nav-aside .link .desc{
+        color: #7F7F7F;
+        margin: 20px 0;
+    }
+    aside #nav-aside .link .linkCtn{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    aside #nav-aside .link .linkCtn section{
+        box-shadow:0 0 5px 1px #c4c3c3;
+        padding: 10px;
+        font-size: 13px;
+        margin: 5px;
+        cursor: pointer;
+    }
+    aside #nav-aside .link .linkCtn section span:nth-child(1){
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        background-color: #e74c3c;
+        vertical-align: 1px;
+    }
+    aside #nav-aside .link .linkCtn section:nth-child(4n+2) span:nth-child(1){
+        background-color: #ffe371;
+    }
+    aside #nav-aside .link .linkCtn section:nth-child(4n+3) span:nth-child(1){
+        background-color: #2ecc71;
+    }
+    aside #nav-aside .link .linkCtn section:nth-child(4n+4) span:nth-child(1){
+        background-color: #5fa5df;
     }
 /* 边栏end */
 
@@ -226,6 +345,7 @@ footer div:nth-child(2){
     display: flex;
     align-items: center;
 }
+
 /* 脚部end */
 
 /* 适应性布局 */

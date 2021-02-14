@@ -1,12 +1,12 @@
 {
-    "daily": [
+    "日常": [
         {
             "uid":1,
             "title":"本次文章为第一次测试文章",
             "coverImg":"/static/imgs/background2.jpg",
             "date":"2021.2.10",
             "type":"日常",
-            "typeUrl":"/blogSort.html",
+            "typeUrl":"/blogSort.html?0",
             "blogUrl":"/blog/2021/02/testBlog.html",
             "author":"Cassius"
         },
@@ -49,19 +49,9 @@
             "typeUrl":"/blog.html",
             "blogUrl":"/blog/1.md",
             "author":"Cassius"
-        },
-        {
-            "uid":6,
-            "title":"第6篇",
-            "coverImg":"/static/imgs/background2.jpg",
-            "date":"2020.2.22",
-            "type":"日常",
-            "typeUrl":"/blog.html",
-            "blogUrl":"/blog/1.md",
-            "author":"Cassius"
         }
     ],
-    "study": [
+    "学习": [
         {
             "uid":7,
             "title":"第7篇",
@@ -82,7 +72,7 @@
             "author":"Cassius"
         }
     ],
-    "read": [
+    "读书": [
         {
             "uid":9,
             "title":"第9篇",
@@ -103,7 +93,7 @@
             "author":"Cassius"
         }
     ],
-    "other": [
+    "其他": [
         {
             "uid":11,
             "title":"第11篇",
@@ -164,6 +154,74 @@
         ,
         {
             "uid":17,
+            "title":"第17篇",
+            "coverImg":"/static/imgs/headImg2.jpg",
+            "date":"2020.1.10",
+            "type":"日常",
+            "typeUrl":"/blog.html",
+            "blogUrl":"/blog/1.md",
+            "author":"Cassius"
+        },
+        {
+            "uid":18,
+            "title":"第11篇",
+            "coverImg":"/static/imgs/headImg2.jpg",
+            "date":"2020.1.20",
+            "type":"读书",
+            "typeUrl":"/blog.html",
+            "blogUrl":"/blog/1.md",
+            "author":"Cassius"
+        },
+        {
+            "uid":19,
+            "title":"第12篇",
+            "coverImg":"/static/imgs/background2.jpg",
+            "date":"2020.3.32",
+            "type":"读书",
+            "typeUrl":"/blog.html",
+            "author":"Cassius"
+        },
+        {
+            "uid":20,
+            "title":"第13篇",
+            "coverImg":"/static/imgs/headImg2.jpg",
+            "date":"2020.1.20",
+            "type":"读书",
+            "typeUrl":"/blog.html",
+            "blogUrl":"/blog/1.md",
+            "author":"Cassius"
+        },
+        {
+            "uid":21,
+            "title":"第14篇",
+            "coverImg":"/static/imgs/background2.jpg",
+            "date":"2020.6.32",
+            "type":"读书",
+            "typeUrl":"/blog.html",
+            "author":"Cassius"
+        },
+        {
+            "uid":22,
+            "title":"第15篇",
+            "coverImg":"/static/imgs/headImg2.jpg",
+            "date":"2020.7.20",
+            "type":"读书",
+            "typeUrl":"/blog.html",
+            "blogUrl":"/blog/1.md",
+            "author":"Cassius"
+        },
+        {
+            "uid":23,
+            "title":"第16篇",
+            "coverImg":"/static/imgs/background2.jpg",
+            "date":"2020.1.32",
+            "type":"读书",
+            "typeUrl":"/blog.html",
+            "author":"Cassius"
+        }
+        ,
+        {
+            "uid":24,
             "title":"第17篇",
             "coverImg":"/static/imgs/headImg2.jpg",
             "date":"2020.1.10",

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/lib/iconfont.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/timeLine.css">
+    <script src="js/lib/vue.js"></script>
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/nav.js"></script>
+</head>
+
+<body>
+    <div id="blog">
+        <nav-box></nav-box>
+        <main>
+            <div class="bgcImg">
+
+            </div>
+            <article>
+                <div class="timeLine">
+                    <section v-for="item in activities">
+                        <div class="dot" v-if="!item.isYear">
+                            <p>{{item.timestamp}}</p>
+                            <p @click="chgUrl(item.url)">{{item.title}}</p>
+                        </div>
+                        <div class="year" v-else>
+                            <p>{{item.title}}</p>
+                        </div>
+                    </section>
+                </div>
+            </article>
+
+        </main>
+    </div>
+    <script src="js/timeLine.js"></script>
+</body>
+
+</html>

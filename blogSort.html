@@ -6,23 +6,62 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/lib/iconfont.css">
     <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/blog.css">
-    <script src="js/vue.js"></script>
-    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/blogSort.css">
+    <script src="js/lib/vue.js"></script>
+    <script src="js/lib/jquery.min.js"></script>
     <script src="js/nav.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
 </head>
 <body>
     <div id="blog">
-        <nav-box></nav-box>
-       
+        <nav-box></nav-box>       
         <main>
-            <div id="md"></div>
+            <div class="bgcImg">
+                <div class="allType">
+                    <div v-for = "type,index in types" class="oneType" v-bind:class="{'active':typeIndex == index}" @click = 'chgUrl(index)'>
+                       <span class="name"> {{type}}<span class="num">{{allBlogArr[index].length}}</span></span>
+                    </div>
+                </div>
+            </div>
+            <article>                     
+                <section v-for="item in nowBlog">
+                    <h2><a :href="item.blogUrl">{{item.title}}</a></h2>
+                    <div class="imgCtn">
+                        <img :src="item.coverImg" alt="">
+                    </div>
+                    <div class="desc">
+                        <div class="author">
+                            <span class="iconfont" id="icon" style="font-size: 16px;
+                ">&#xe7e5;</span>
+                            {{item.author}}
+                        </div>
+                        <div class="date">
+                            <span class="iconfont" id="icon" style="font-size: 14px;
+                ">&#xe714;</span>
+                {{item.date}}
+                        </div>
+                        <div class="type">
+                            <span class="iconfont" id="icon" style="font-size: 16px;
+                ">&#xe61e;</span>
+                <a :href="item.typeUrl">{{item.type}}</a>
+                        </div>
+                    </div>
+                </section>
+                <div class="chgPage">
+                    <ul>
+                        <li  v-bind:class="{'hidden':curPage == 1}"  @click="chgPage(-1)">
+                            <span>上一页</span>
+                        </li>
+                        <li v-for="index in indexs"  v-bind:class="{'active':curPage == index}" @click="chgPage(index)"><span>{{index}}</span></li>
+                        <li v-bind:class="{'hidden':curPage === pageNum}"  @click="chgPage(-2)">
+                            <span>下一页</span>
+                        </li>
+                    </ul>
+                </div>
+            </article>
         </main>
     </div>
-    <script src="js/blog.js"></script>
+    <script src="js/blogSort.js"></script>
 </body>
 </html>

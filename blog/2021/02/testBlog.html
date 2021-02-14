@@ -6,10 +6,16 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>Document</title>
     <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/iconfont.css">
+    <link rel="stylesheet" href="/css/lib/iconfont.css">
     <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/blog.css">
-
+    <link rel="stylesheet" href="/css/lib/el-index.css">
+    <script src="/js/myJs.js"></script>
+    <script src="/js/lib/vue.js"></script>
+    <script src="/js/lib/el-index.js"></script>
+    <script src="/js/lib/jquery.min.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/lib/axios.min.js"></script>
 </head>
 <body>
     <div id="blog">
@@ -39,10 +45,12 @@
             </div>
             <article>
                 <h1>sldjflk1</h1>
+               
             </article>
             <div class="cmt">
                 
                 <div class="blogMsgs">
+                    <h2>留言(共{{msgs.length}}条)</h2>
                     <div class="msg"  v-for="item in msgs">
                         <div class="top">
                             <div class="left">
@@ -86,14 +94,7 @@
         </main>
         <footer></footer>
     </div>
-    <script src="/js/myJs.js"></script>
-    <script src="/js/vue.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/nav.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
     <script src="/js/blog.js"></script>
     
 </body>

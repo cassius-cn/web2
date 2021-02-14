@@ -7,7 +7,10 @@ Vue.component("navBox", {
     <div class="right">
         <div class="btn-theme">
             <span class="iconfont" id="icon" style="font-size: 24px;
-                ">&#xe66f;</span>
+                " @click="chgShow">&#xe66f;</span>
+            <div class="box" :class="{'hidden': isShow }"><h5>choose mode</h5>
+            <div></div>
+            </div>
         </div>
         <div class="search">
             <span class="iconfont" id="icon" style="font-size: 15px;">&#xe63b;</span>
@@ -40,10 +43,13 @@ Vue.component("navBox", {
 </nav>`,
     data() {
         return {
-
+            isShow: true
         }
-    }
-    , methods: {
+    },
+    methods: {
+        chgShow() {
+            this.isShow = !this.isShow;
+        },
         goto(index) {
             if (1 === index) {
                 if (location.pathname !== '/index.html') {
@@ -53,37 +59,34 @@ Vue.component("navBox", {
                 if (location.pathname !== '/blogSort.html') {
                     location.href = '/blogSort.html';
                 }
+            } else if (index === 3) {
+                if (location.pathname !== '/timeLine.html') {
+                    location.href = '/timeLine.html';
+                }
             }
         }
 
     },
-    mounted: function () {
-        window.onscroll = function () {
+    mounted: function() {
+        window.onscroll = function() {
             if ($(document).scrollTop() >= 60) {
                 $("nav").css({ "background": '#fff' });
-                $("nav").css({ "box-shadow": '0 0 5px 2px #b4c3c3' })
+                $("nav").css({ "box-shadow": '0 0 2px 1px #b4c3c3' })
             } else {
-                $("nav").css({ "background": 'rgba(250,250,250,0.2)' })
-                $("nav").css({ "box-shadow": 'none' })
-            }
-            if ($(document).scrollTop() >= 60) {
-                $("nav").css({ "background": '#fff' });
-                $("nav").css({ "box-shadow": '0 0 5px 2px #b4c3c3' })
-            } else {
-                $("nav").css({ "background": 'rgba(250,250,250,0.2)' })
+                $("nav").css({ "background": 'rgba(250,250,250,0.5)' })
                 $("nav").css({ "box-shadow": 'none' })
             }
             // 侧边栏滚动控制
             if (location.pathname === '/index.html') {
                 let asideTop = 490; //侧边栏距顶部高度
-                let pageBtm = 780; //侧边栏停止时底部高度
+
+                let pageBtm = document.querySelector("#nav-aside").offsetHeight + 180; //侧边栏停止时底部高度
+                console.log(pageBtm)
                 if ($(document).scrollTop() >= asideTop && ($(document).height() - $(document).scrollTop()) > pageBtm) {
                     $("#nav-aside").css({ "top": $(document).scrollTop() - asideTop + 'px' });
-                }
-                else if (($(document).height() - $(document).scrollTop()) <= pageBtm) {
+                } else if (($(document).height() - $(document).scrollTop()) <= pageBtm) {
                     $("#nav-aside").css({ "top": $(document).height() - pageBtm - asideTop + 'px' });
-                }
-                else {
+                } else {
                     $("#nav-aside").css({ "top": 0 + 'px' });
                 }
             }
