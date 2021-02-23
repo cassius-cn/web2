@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>js学习笔记</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/lib/iconfont.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/blog.css">
+    <link rel="stylesheet" href="/css/lib/el-index.css">
+    <script src="/js/myJs.js"></script>
+    <script src="/js/lib/vue.js"></script>
+    <script src="/js/lib/el-index.js"></script>
+    <script src="/js/lib/jquery.min.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/lib/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="blog">
+        <nav-box></nav-box>
+
+        <main>
+            <div class="bgcImg">
+                <p class="title">{{item.title}}</p>
+                <div class="desc">
+                    <div class="author">
+                        <span class="iconfont" id="icon" style="font-size: 18px;
+            ">&#xe7e5;</span> {{item.author}}
+                    </div>
+
+                    <div class="type">
+                        <span class="iconfont" id="icon" style="font-size: 18px;
+            ">&#xe61e;</span> {{item.type}}
+                    </div>
+                    <div class="date">
+                        <span class="iconfont" id="icon" style="font-size: 16px;
+            ">&#xe714;</span> {{item.date}}
+                    </div>
+                </div>
+            </div>
+            <article>
+                <h1>js学习笔记</h1>
+                <hr>
+                <h3>作者: Cassius</h3>
+                <h3>日期: 2020年9月2日</h3>
+                <h3>牢记这些常用函数</h3>
+                <hr>
+                <h2>String的常用函数</h2>
+                <div class="box1"><span>str.charAt(n)</span>
+                    <p> 返回字符串str中的在第n个位置的字符</p>
+                    <span>str1.concat(str2)</span>
+                    <p> 将str1和str2连接并返回</p>
+                    <span>str1.indexOf(str2) </span>
+                    <p> 返回字符串str1中第一次出现str2的位置</p>
+                    <span>str1.includes(str2)</span>
+                    <p> 返回字符串st1中是否包含str2</p>
+                    <span>str1.lastIndexOf(str2)</span>
+                    <p>返回str1中第一次出现str2的位置,从后向前数</p>
+                    <span>str.slice(m,n) </span>
+                    <p>返回str中从m位置开始到n位置的字符串片段（不包含n）</p>
+                    <span>str.split(" ")</span>
+                    <p>字符串str以空格为标志，分隔成一个数组，并返回数组</p>
+                    <span>str.substr(m,n)</span>
+                    <p>从字符串str中提取一段字符串，起始位置为索引位置m，长度为n</p>
+                    <span>str.substring(m,n) </span>
+                    <p>str提取一段字符串，起始索引m，终止索引n（不包括）</p>
+                    <span>str.toLowerCase(</span>
+                    <p>将字符串str转换成小写</p>
+                    <span>str.toUpperCase()</span>
+                    <p>将字符串str转换成大写</p>
+                </div>
+                <h2>Math对象的常用函数</h2>
+                <div class="box1"><span>Math.abs(n)</span>
+                    <p>获取n的绝对值</p>
+                    <span>Math.ceil(n)</span>
+                    <p>n向上取整</p>
+                    <span>Math.floor(n)</span>
+                    <p>n向下取整</p>
+                    <span>Math.round(n)</span>
+                    <p>n四舍五入</p>
+                    <span>Math.random()</span>
+                    <p>取[0,1)的随机数</p>
+                    <span>Math.max(array)</span>
+                    <p>在数组中取最大值</p>
+                    <span>Math.min(array)</span>
+                    <p>在数组中取最小值</p>
+                    <span>Math.PI</span>
+                    <p>取圆周率</p>
+                    <span>Math.pow(n,m)</span>
+                    <p>对n的m次方
+                    </p>
+                    <span>Math.sqrt(n)</span>
+                    <p>对n进行开平方</p>
+                </div>
+                <h2>Array数组对象常用函数</h2>
+                <div class="box1"><span>arr1.concat(arr2)</span>
+                    <p>连接两个数组</p>
+                    <span>arr.fill(n)</span>
+                    <p>用n来替换数组中的所有元素</p>
+                    <span>arr.filter(item => item%2 == 0)</span>
+                    <p>返回数组中所有为偶数的元素</p>
+                    <span>arr.find(item => item%2 == 0)</span>
+                    <p>返回数组中第一个为偶数的元素</p>
+                    <span>arr.findIndex()</span>
+                    <p>返回满足条件的第一个元素的索引号</p>
+                    <span>arr.forEach()</span>
+                    <p>数组中每个元素都执行一次函数(无返回数组)</p>
+                    <span>arr.map(item => item+1)</span>
+                    <p>通过指定函数处理数组中所有元素,并返回数组</p>
+                    <span>arr.includes(n)</span>
+                    <p>检验数组中是否含有元素n</p>
+                    <span>arr.indexOf(n)</span>
+                    <p>返回数组中第一个元素n的索引位置</p>
+                    <span>arr.join()</span>
+                    <p>将所有元素转换成一个字符串</p>
+                    <span>Array.from("1234")</span>
+                    <p>从字符串中生成一个数组，返回[1,2,3,4]</p>
+                    <span>arr.pop()</span>
+                    <p>删除数组中最后一个元素，返回删除的元素</p>
+                    <span>arr.push()</span>
+                    <p>向数组末尾添加一个或多个元素，返回新的长度</p>
+                    <span>arr.reseve()</span>
+                    <p>反转元素顺序</p>
+                    <span>arr.unshift()</span>
+                    <p>向数组开头添加一个元素，并返回一个新数组长度</p>
+                    <span>arr.shift()</span>
+                    <p>删除并返回数组的第一个元素</p>
+                    <span>arr.splice()</span>
+                    <p>添加或删除数组中元素</p>
+                    <span>arr.slice()</span>
+                    <p>截取数组中的一段元素，返回一个新的数组</p>
+                    <span>arr.sort(fun)</span>
+                    <p>根据函数，将数据进行排序</p>
+                    <span>arr.toString()</span>
+                    <p>将数组转换成字符串</p>
+                </div>
+
+            </article>
+            <div class="cmt">
+
+                <div class="blogMsgs">
+                    <h2>留言(共{{msgs.length}}条)</h2>
+                    <div class="msg" v-for="item in msgs">
+                        <div class="top">
+                            <div class="left">
+                                <img :src="item.imgUrl" alt="">
+                            </div>
+                            <div class="right">
+                                <p class="name">{{item.username}}</p>
+                                <p class="date">{{item.date}}</p>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            {{item.content}}
+                        </div>
+                    </div>
+                </div>
+                <div class="write">
+                    <h2>欢迎发表你的看法</h2>
+                    <el-form ref="form" :model="form" label-width="80px">
+                        <el-form-item label="你的称呼">
+                            <el-input v-model="form.username"></el-input>
+                        </el-form-item>
+                        <el-form-item label="头像选择">
+                            <el-radio-group v-model="form.imgUrl" style="display: flex;align-items: baseline;">
+                                <el-radio label="/static/imgs/headImg1.jpg"><img src="/static/imgs/headImg1.jpg" alt="" width="50px"></el-radio>
+                                <el-radio label="/static/imgs/headImg2.jpg"><img src="/static/imgs/headImg2.jpg" alt="" width="50px"></el-radio>
+                                <el-radio label="/static/imgs/headImg3.jpg"><img src="/static/imgs/headImg3.jpg" alt="" width="50px"></el-radio>
+                                <el-radio label="/static/imgs/headImg4.jpg"><img src="/static/imgs/headImg4.jpg" alt="" width="50px"></el-radio>
+                                <el-radio label="/static/imgs/headImg5.jpg"><img src="/static/imgs/headImg5.jpg" alt="" width="50px"></el-radio>
+                                <el-radio label="/static/imgs/headImg6.jpg"><img src="/static/imgs/headImg6.jpg" alt="" width="50px"></el-radio>
+                            </el-radio-group>
+                        </el-form-item>
+                        <el-form-item label="你的留言">
+                            <el-input type="textarea" v-model="form.content"></el-input>
+                        </el-form-item>
+                        <el-form-item style="text-align:right;">
+                            <el-button type="primary" :disabled="canSub" id="subBtn" @click="doSubmit">发表</el-button>
+                        </el-form-item>
+                    </el-form>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+
+    <script src="/js/blog.js"></script>
+
+</body>
+
+</html>

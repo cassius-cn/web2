@@ -1,26 +1,29 @@
 /* 导航栏 */
-nav{
+
+nav {
     position: fixed;
     top: 0;
     width: 100%;
     height: 60px;
-    background-color:rgba(250,250,250,0.5);
+    background-color: rgba(250, 250, 250, 0.5);
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     z-index: 100;
 }
 
-nav .left{
+nav .left {
     display: flex;
     justify-content: space-between;
 }
-nav .left img{
+
+nav .left img {
     height: 40px;
     width: 40px;
     border-radius: 20px;
 }
-nav .left p{
+
+nav .left p {
     text-align: center;
     width: 200px;
     font-size: 20px;
@@ -28,39 +31,46 @@ nav .left p{
     font-weight: 500;
     color: #444;
 }
-nav .left p span{
+
+nav .left p span {
     font-weight: 600;
 }
-nav .right{
+
+nav .right {
     display: flex;
 }
-nav .right .btn-theme{
+
+nav .right .btn-theme {
     width: 60px;
     height: 40px;
     text-align: center;
     line-height: 40px;
     position: relative;
 }
-nav .right .btn-theme .box{
+
+nav .right .btn-theme .box {
     position: absolute;
     width: 100px;
     top: 44px;
     left: -20px;
     border: 1px solid green;
 }
-nav .right .btn-theme .hidden{
+
+nav .right .btn-theme .hidden {
     display: none;
 }
-nav .right .btn-theme span{
+
+nav .right .btn-theme span {
     color: #444;
     position: relative;
 }
-nav .right .btn-theme span:hover{
+
+nav .right .btn-theme span:hover {
     color: #2F9CF1;
     cursor: pointer;
 }
 
-nav .right .search{
+nav .right .search {
     padding: 0px 10px;
     border: 1px solid rgb(173, 171, 171);
     border-radius: 5px;
@@ -70,110 +80,152 @@ nav .right .search{
     background-color: #fff;
 }
 
-nav .right .search input{
+nav .right .search input {
     width: 160px;
     font-size: 15px;
 }
-nav .right .search:focus-within{
+
+nav .right .search:focus-within {
     border: 1px solid #078df3;
 }
-nav .right .nav-home{
+
+nav .right .nav-home {
     text-align: center;
     width: 80px;
     line-height: 30px;
     margin: 5px 0px;
 }
 
-nav .right .nav-home  span:nth-child(1){
+nav .right .nav-home span:nth-child(1) {
     font-size: 18px;
     color: #444;
 }
-nav .right .nav-home span:nth-child(2){
+
+nav .right .nav-home span:nth-child(2) {
     font-size: 16px;
     color: #444;
 }
-nav .right .nav-home:hover span{
+
+nav .right .nav-home:hover span {
     color: #2F9CF1;
     cursor: pointer;
 }
 
-nav .right .nav-blog{
+nav .right .nav-blog {
     text-align: center;
     width: 80px;
     line-height: 30px;
     margin: 5px 0px;
 }
 
-nav .right .nav-blog span:nth-child(1){
+nav .right .nav-blog span:nth-child(1) {
     font-size: 18px;
     color: #444;
 }
-nav .right .nav-blog span:nth-child(2){
+
+nav .right .nav-blog span:nth-child(2) {
     font-size: 16px;
     color: #444;
 }
-nav .right .nav-blog:hover span{
+
+nav .right .nav-blog:hover span {
     color: #2F9CF1;
     cursor: pointer;
 }
 
-nav .right .nav-timeline{
+nav .right .nav-timeline {
     text-align: center;
     width: 100px;
     line-height: 30px;
     margin: 5px 0px;
 }
 
-nav .right .nav-timeline span:nth-child(1){
+nav .right .nav-timeline span:nth-child(1) {
     font-size: 18px;
     color: #444;
 }
-nav .right .nav-timeline span:nth-child(2){
+
+nav .right .nav-timeline span:nth-child(2) {
     font-size: 16px;
     color: #444;
 }
-nav .right .nav-timeline:hover span{
+
+nav .right .nav-timeline:hover span {
     color: #2F9CF1;
     cursor: pointer;
 }
 
-nav .right .nav-aphorism{
+nav .right .nav-aphorism {
+    text-align: center;
+    width: 80px;
+    line-height: 30px;
+    margin: 5px 0px;
+    display: none;
+}
+
+nav .right .nav-aphorism span:nth-child(1) {
+    font-size: 18px;
+    color: #444;
+}
+
+nav .right .nav-aphorism span:nth-child(2) {
+    font-size: 16px;
+    color: #444;
+}
+
+nav .right .nav-aphorism:hover span {
+    color: #2F9CF1;
+    cursor: pointer;
+}
+
+nav .right .nav-try {
     text-align: center;
     width: 80px;
     line-height: 30px;
     margin: 5px 0px;
 }
 
-nav .right .nav-aphorism span:nth-child(1){
+nav .right .nav-try span:nth-child(1) {
     font-size: 18px;
     color: #444;
-}
-nav .right .nav-aphorism span:nth-child(2){
-    font-size: 16px;
-    color: #444;
-}
-nav .right .nav-aphorism:hover span{
-    color: #2F9CF1;
-    cursor: pointer;
-}
-nav .right .nav-try{
-    text-align: center;
-    width: 80px;
-    line-height: 30px;
-    margin: 5px 0px;
 }
 
-nav .right .nav-try span:nth-child(1){
-    font-size: 18px;
-    color: #444;
-}
-nav .right .nav-try span:nth-child(2){
+nav .right .nav-try span:nth-child(2) {
     font-size: 16px;
     color: #444;
 }
-nav .right .nav-try:hover span{
+
+nav .right .nav-try:hover span {
     color: #2F9CF1;
     cursor: pointer;
 }
+
+nav .right .nav-try .box {
+    position: absolute;
+    display: none;
+    top: 60px;
+    right: 0px;
+    background-color: #fff;
+    box-shadow: 0 0 5px 1px #c4c3c3;
+}
+
+nav .right .nav-try .box section {
+    text-align: left;
+    padding: 5px 20px;
+}
+
+nav .right .nav-try .box section a {
+    color: #444;
+    display: block;
+}
+
+nav .right .nav-try .box section:hover {
+    background-color: #2F9CF1;
+}
+
+nav .right .nav-try .box section:hover a {
+    color: #fff;
+}
+
 
 /* 导航栏end */

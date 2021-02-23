@@ -16,7 +16,7 @@ let blog = new Vue({
         msgs: []
     },
     computed: {
-        canSub: function () {
+        canSub: function() {
             return (!this.form.username || !this.form.content || !this.form.imgUrl);
         }
     },
@@ -29,11 +29,11 @@ let blog = new Vue({
             that.form.date = encodeURI(that.form.date);
             that.form.blogId = that.uid;
             axios.post('http://ustb.peijunjie.cn:3000/msgsInsert', that.form)
-                .then(function (response) {
+                .then(function(response) {
                     that.form.content = '';
                     that.form.username = decodeURI(that.form.username);
                 })
-                .catch(function (error) {
+                .catch(function(error) {
                     that.form.content = decodeURI(that.form.content);
                     that.form.username = decodeURI(that.form.username);
                     alert("发表失败")
@@ -42,8 +42,8 @@ let blog = new Vue({
         getMsgs() {
             let that = this;
             axios.post('http://ustb.peijunjie.cn:3000/msgsQueryByBid', { blogId: this.uid })
-                .then(function (response) {
-                    const compare = function (obj1, obj2) {
+                .then(function(response) {
+                    const compare = function(obj1, obj2) {
                         var val1 = obj1.uid;
                         var val2 = obj2.uid;
                         if (val1 > val2) {
@@ -62,24 +62,26 @@ let blog = new Vue({
                     });
                     that.msgs = that.msgs.sort(compare);
                 })
-                .catch(function (error) {
+                .catch(function(error) {
                     console.log("获取msg失败");
                 });
         }
     },
-    mounted: function () {
+    mounted: function() {
         let that = this;
-        window.addEventListener('pageshow', function () {
+        if (location.href.split("?")[1] != undefined)
+            that.uid = location.href.split("?")[1];
+        window.addEventListener('pageshow', function() {
             $.ajax({
                 url: "/js/json/blog.json",
                 type: "GET",
                 dataType: "json",
-                success: function (data) {
+                success: function(data) {
                     let allBlog = [];
-                    for(let item in data){
+                    for (let item in data) {
                         allBlog = allBlog.concat(data[item]);
                     }
-                    const compare = function (obj1, obj2) {
+                    const compare = function(obj1, obj2) {
                         var val1 = obj1.uid;
                         var val2 = obj2.uid;
                         if (val1 < val2) {

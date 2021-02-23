@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        main * {
+            box-sizing: border-box;
+        }
+        
+        body {}
+        
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            background-color: white;
+            width: 100%;
+        }
+        
+        .cube {
+            width: 250px;
+            height: 250px;
+            transform-style: preserve-3d;
+            animation: rotate-cube 10s ease-in-out infinite;
+        }
+        
+        .cube>div {
+            width: 250px;
+            height: 250px;
+            background-size: cover;
+            background-position: center center;
+            opacity: 0.8;
+            position: absolute;
+        }
+        
+        .cube .img1 {
+            background-image: url("/static/imgs/background7.jpg");
+            transform: translateZ(125px);
+        }
+        
+        .cube .img2 {
+            background-image: url("/static/imgs/background3.jpg");
+            transform: rotateY(90deg) translateZ(125px);
+        }
+        
+        .cube .img3 {
+            background-image: url("/static/imgs/background4.jpg");
+            transform: rotateY(-90deg) translateZ(125px);
+        }
+        
+        .cube .img4 {
+            background-image: url("/static/imgs/background5.jpg");
+            transform: rotateX(90deg) translateZ(125px);
+        }
+        
+        .cube .img5 {
+            background-image: url("/static/imgs/background6.jpg");
+            transform: rotateX(-90deg) translateZ(125px);
+        }
+        
+        .cube .img6 {
+            background-image: url("/static/imgs/background2.jpg");
+            transform: rotateY(180deg) translateZ(125px);
+        }
+        
+        @keyframes rotate-cube {
+            0% {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            20% {
+                transform: rotateY(-90deg);
+            }
+            40% {
+                transform: rotateX(-90deg)
+            }
+            60% {
+                transform: rotateY(90deg);
+            }
+            80% {
+                transform: rotateX(90deg);
+            }
+            100% {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+        }
+        
+        a {
+            display: block;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="cube">
+            <div class="img1"></div>
+            <div class="img2"></div>
+            <div class="img3"></div>
+            <div class="img4"></div>
+            <div class="img5"></div>
+            <div class="img6"></div>
+        </div>
+    </main>
+    <a href="/test.html" download="/test/3D旋转图片.html">点击下载源代码</a>
+
+</body>
+
+</html>

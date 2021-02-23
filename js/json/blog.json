@@ -1,234 +1,125 @@
 {
-    "日常": [
-        {
-            "uid":1,
-            "title":"本次文章为第一次测试文章",
-            "coverImg":"/static/imgs/background2.jpg",
-            "date":"2021.2.10",
-            "type":"日常",
-            "typeUrl":"/blogSort.html?0",
-            "blogUrl":"/blog/2021/02/testBlog.html",
-            "author":"Cassius"
+    "日常": [{
+            "uid": 10,
+            "title": "宿舍银杏合照",
+            "coverImg": "/static/2020/11/hezhaoCover.jpg",
+            "date": "2020.11.8",
+            "type": "日常",
+            "typeUrl": "/blogSort.html?0",
+            "blogUrl": "/blog/2020/11/hezhao.html?10",
+            "author": "Cassius"
+        }, {
+            "uid": 9,
+            "title": "简谈央行推出的数字货币",
+            "coverImg": "/static/2020/11/huobiCover.jpg",
+            "date": "2020.11.5",
+            "type": "日常",
+            "typeUrl": "/blogSort.html?0",
+            "blogUrl": "/blog/2020/11/huobi.html?9",
+            "author": "Cassius"
         },
         {
-            "uid":2,
-            "title":"第2篇",
-            "coverImg":"/static/imgs/background2.jpg",
-            "date":"2020.2.12",
-            "type":"日常",
-            "typeUrl":"/blog.html",
-            "blogUrl":"/blog/1.md",
-            "author":"Cassius"
-        },
-        {
-            "uid":3,
-            "title":"第3篇",
-            "coverImg":"/static/imgs/background2.jpg",
-            "date":"2020.1.12",
-            "type":"日常",
-            "typeUrl":"/blog.html",
-            "blogUrl":"/blog/1.md",
-            "author":"Cassius"
-        },
-        {
-            "uid":4,
-            "title":"第4篇",
-            "coverImg":"/static/imgs/background2.jpg",
-            "date":"2020.7.2",
-            "type":"日常",
-            "typeUrl":"/blog.html",
-            "blogUrl":"/blog/1.md",
-            "author":"Cassius"
-        },
-        {
-            "uid":5,
-            "title":"第5篇",
-            "coverImg":"/static/imgs/background2.jpg",
-            "date":"2020.8.12",
-            "type":"日常",
-            "typeUrl":"/blog.html",
-            "blogUrl":"/blog/1.md",
-            "author":"Cassius"
+            "uid": 5,
+            "title": "国庆冲香山",
+            "coverImg": "/static/2020/10/xiangshanCover.jpg",
+            "date": "2020.10.2",
+            "type": "日常",
+            "typeUrl": "/blogSort.html?0",
+            "blogUrl": "/blog/2020/10/xiangshan.html?5",
+            "author": "Cassius"
         }
     ],
-    "学习": [
-        {
-            "uid":7,
-            "title":"第7篇",
-            "coverImg":"/static/imgs/background2.jpg",
-            "date":"2020.2.20",
-            "type":"学习",
-            "typeUrl":"/blog.html",
-            "blogUrl":"/blog/1.md",
-            "author":"Cassius"
+    "学习": [{
+            "uid": 12,
+            "title": "Docker简单命令 + 实战",
+            "coverImg": "/static/2020/11/dockerCover.jpg",
+            "date": "2020.11.26",
+            "type": "学习",
+            "typeUrl": "/blogSort.html?1",
+            "blogUrl": "/blog/2020/11/docker.html?12",
+            "author": "Cassius"
+        }, {
+            "uid": 8,
+            "title": "MarkDown简单教程",
+            "coverImg": "/static/2020/11/mdCover.jpg",
+            "date": "2020.11.5",
+            "type": "学习",
+            "typeUrl": "/blogSort.html?1",
+            "blogUrl": "/blog/2020/11/markdown.html?8",
+            "author": "Cassius"
         },
         {
-            "uid":8,
-            "title":"第8篇",
-            "coverImg":"/static/imgs/background1.jpg",
-            "date":"2020.4.3",
-            "type":"学习",
-            "typeUrl":"/blog.html",
-            "author":"Cassius"
+            "uid": 7,
+            "title": "各类硬盘速度简析",
+            "coverImg": "/static/2020/10/yingpanCover.jpg",
+            "date": "2020.10.3",
+            "type": "学习",
+            "typeUrl": "/blogSort.html?1",
+            "blogUrl": "/blog/2020/10/yingpan.html?7",
+            "author": "Cassius"
+        },
+        {
+            "uid": 4,
+            "title": "Linux常用命令",
+            "coverImg": "/static/2020/09/linuxCover.jpg",
+            "date": "2020.9.2",
+            "type": "学习",
+            "typeUrl": "/blogSort.html?1",
+            "blogUrl": "/blog/2020/09/study2.html?4",
+            "author": "Cassius"
+        },
+        {
+            "uid": 3,
+            "title": "js常用对象的函数",
+            "coverImg": "/static/2020/09/jsCover.jpg",
+            "date": "2020.9.1",
+            "type": "学习",
+            "typeUrl": "/blogSort.html?1",
+            "blogUrl": "/blog/2020/09/study1.html?3",
+            "author": "Cassius"
         }
     ],
-    "读书": [
-        {
-            "uid":9,
-            "title":"第9篇",
-            "coverImg":"/static/imgs/headImg2.jpg",
-            "date":"2020.1.20",
-            "type":"读书",
-            "typeUrl":"/blog.html",
-            "blogUrl":"/blog/1.md",
-            "author":"Cassius"
+    "读书": [{
+            "uid": 11,
+            "title": "品读《大败局》",
+            "coverImg": "/static/2020/11/dabaijuCover.jpg",
+            "date": "2020.11.14",
+            "type": "读书",
+            "typeUrl": "/blogSort.html?2",
+            "blogUrl": "/blog/2020/11/dabaiju.html?11",
+            "author": "Cassius"
         },
         {
-            "uid":10,
-            "title":"第10篇",
-            "coverImg":"/static/imgs/background2.jpg",
-            "date":"2020.3.32",
-            "type":"读书",
-            "typeUrl":"/blog.html",
-            "author":"Cassius"
+            "uid": 2,
+            "title": "《霍金的“赌注”》读后感",
+            "coverImg": "/static/2020/09/duzhuCover.jpg",
+            "date": "2020.9.1",
+            "type": "读书",
+            "typeUrl": "/blogSort.html?2",
+            "blogUrl": "/blog/2020/09/read1.html?2",
+            "author": "Cassius"
         }
     ],
-    "其他": [
-        {
-            "uid":11,
-            "title":"第11篇",
-            "coverImg":"/static/imgs/headImg2.jpg",
-            "date":"2020.1.20",
-            "type":"读书",
-            "typeUrl":"/blog.html",
-            "blogUrl":"/blog/1.md",
-            "author":"Cassius"
+    "其他": [{
+            "uid": 6,
+            "title": "win10小工具",
+            "coverImg": "/static/2020/10/win10Cover.jpg",
+            "date": "2020.10.2",
+            "type": "其他",
+            "typeUrl": "/blogSort.html?3",
+            "blogUrl": "/blog/2020/10/win10.html?6",
+            "author": "Cassius"
         },
         {
-            "uid":12,
-            "title":"第12篇",
-            "coverImg":"/static/imgs/background2.jpg",
-            "date":"2020.3.32",
-            "type":"读书",
-            "typeUrl":"/blog.html",
-            "author":"Cassius"
-        },
-        {
-            "uid":13,
-            "title":"第13篇",
-            "coverImg":"/static/imgs/headImg2.jpg",
-            "date":"2020.1.20",
-            "type":"读书",
-            "typeUrl":"/blog.html",
-            "blogUrl":"/blog/1.md",
-            "author":"Cassius"
-        },
-        {
-            "uid":14,
-            "title":"第14篇",
-            "coverImg":"/static/imgs/background2.jpg",
-            "date":"2020.6.32",
-            "type":"读书",
-            "typeUrl":"/blog.html",
-            "author":"Cassius"
-        },
-        {
-            "uid":15,
-            "title":"第15篇",
-            "coverImg":"/static/imgs/headImg2.jpg",
-            "date":"2020.7.20",
-            "type":"读书",
-            "typeUrl":"/blog.html",
-            "blogUrl":"/blog/1.md",
-            "author":"Cassius"
-        },
-        {
-            "uid":16,
-            "title":"第16篇",
-            "coverImg":"/static/imgs/background2.jpg",
-            "date":"2020.1.32",
-            "type":"读书",
-            "typeUrl":"/blog.html",
-            "author":"Cassius"
+            "uid": 1,
+            "title": "本文章为网站2.0版本的第一篇测试文章",
+            "coverImg": "/static/imgs/background3.jpg",
+            "date": "2021.2.10",
+            "type": "其他",
+            "typeUrl": "/blogSort.html?3",
+            "blogUrl": "/blog/2021/02/testBlog.html?1",
+            "author": "Cassius"
         }
-        ,
-        {
-            "uid":17,
-            "title":"第17篇",
-            "coverImg":"/static/imgs/headImg2.jpg",
-            "date":"2020.1.10",
-            "type":"日常",
-            "typeUrl":"/blog.html",
-            "blogUrl":"/blog/1.md",
-            "author":"Cassius"
-        },
-        {
-            "uid":18,
-            "title":"第11篇",
-            "coverImg":"/static/imgs/headImg2.jpg",
-            "date":"2020.1.20",
-            "type":"读书",
-            "typeUrl":"/blog.html",
-            "blogUrl":"/blog/1.md",
-            "author":"Cassius"
-        },
-        {
-            "uid":19,
-            "title":"第12篇",
-            "coverImg":"/static/imgs/background2.jpg",
-            "date":"2020.3.32",
-            "type":"读书",
-            "typeUrl":"/blog.html",
-            "author":"Cassius"
-        },
-        {
-            "uid":20,
-            "title":"第13篇",
-            "coverImg":"/static/imgs/headImg2.jpg",
-            "date":"2020.1.20",
-            "type":"读书",
-            "typeUrl":"/blog.html",
-            "blogUrl":"/blog/1.md",
-            "author":"Cassius"
-        },
-        {
-            "uid":21,
-            "title":"第14篇",
-            "coverImg":"/static/imgs/background2.jpg",
-            "date":"2020.6.32",
-            "type":"读书",
-            "typeUrl":"/blog.html",
-            "author":"Cassius"
-        },
-        {
-            "uid":22,
-            "title":"第15篇",
-            "coverImg":"/static/imgs/headImg2.jpg",
-            "date":"2020.7.20",
-            "type":"读书",
-            "typeUrl":"/blog.html",
-            "blogUrl":"/blog/1.md",
-            "author":"Cassius"
-        },
-        {
-            "uid":23,
-            "title":"第16篇",
-            "coverImg":"/static/imgs/background2.jpg",
-            "date":"2020.1.32",
-            "type":"读书",
-            "typeUrl":"/blog.html",
-            "author":"Cassius"
-        }
-        ,
-        {
-            "uid":24,
-            "title":"第17篇",
-            "coverImg":"/static/imgs/headImg2.jpg",
-            "date":"2020.1.10",
-            "type":"日常",
-            "typeUrl":"/blog.html",
-            "blogUrl":"/blog/1.md",
-            "author":"Cassius"
-        }
+
     ]
 }

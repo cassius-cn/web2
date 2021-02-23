@@ -12,19 +12,20 @@
     <link rel="stylesheet" href="css/nav.css">
     <script src="js/lib/vue.js"></script>
     <script src="js/lib/jquery.min.js"></script>
+
 </head>
 
 <body>
     <div id="main">
         <nav-box></nav-box>
         <main>
-            <div class="home-bgc">
+            <div class="bgcImg">
                 <p>Act</p>
                 <p>Stay hungry, stay foolish.</p>
             </div>
             <div class="frame">
                 <div class="home-main">
-                    <article>                     
+                    <article>
                         <section v-for="item in nowBlog">
                             <h2><a :href="item.blogUrl">{{item.title}}</a></h2>
                             <div class="imgCtn">
@@ -33,28 +34,26 @@
                             <div class="desc">
                                 <div class="author">
                                     <span class="iconfont" id="icon" style="font-size: 16px;
-                        ">&#xe7e5;</span>
-                                    {{item.author}}
+                        ">&#xe7e5;</span> {{item.author}}
                                 </div>
                                 <div class="date">
                                     <span class="iconfont" id="icon" style="font-size: 14px;
-                        ">&#xe714;</span>
-                        {{item.date}}
+                        ">&#xe714;</span> {{item.date}}
                                 </div>
                                 <div class="type">
                                     <span class="iconfont" id="icon" style="font-size: 16px;
                         ">&#xe61e;</span>
-                        <a :href="item.typeUrl">{{item.type}}</a>
+                                    <a :href="item.typeUrl">{{item.type}}</a>
                                 </div>
                             </div>
                         </section>
                         <div class="chgPage">
                             <ul>
-                                <li  v-bind:class="{'hidden':curPage == 1}"  @click="chgPage(-1)">
+                                <li v-bind:class="{'hidden':curPage == 1}" @click="chgPage(-1)">
                                     <span>上一页</span>
                                 </li>
-                                <li v-for="index in indexs"  v-bind:class="{'active':curPage == index}" @click="chgPage(index)"><span>{{index}}</span></li>
-                                <li v-bind:class="{'hidden':curPage === pageNum}"  @click="chgPage(-2)">
+                                <li v-for="index in indexs" v-bind:class="{'active':curPage == index}" @click="chgPage(index)"><span>{{index}}</span></li>
+                                <li v-bind:class="{'hidden':curPage === pageNum}" @click="chgPage(-2)">
                                     <span>下一页</span>
                                 </li>
                             </ul>
@@ -63,7 +62,7 @@
                     <aside>
                         <div id="nav-aside">
                             <div class="img">
-                                <img src="/static/imgs/headImg2.jpg" alt="">
+                                <img src="/static/imgs/webIcon.jpg" alt="">
                             </div>
                             <p>Cassius</p>
                             <div class="num">
@@ -97,7 +96,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                     </aside>
                 </div>
             </div>
@@ -112,11 +111,12 @@
             <div>
                 <span class="iconfont" id="icon" style="font-size: 20px; color: #7F7F7F;padding: 5px;
             ">&#xe62b;</span>
-            <span style="font-size: 16px;color: #2F9CF1;">备案号：京ICP备19044452号</span>
+                <span style="font-size: 16px;color: #2F9CF1;">备案号：京ICP备19044452号</span>
             </div>
         </footer>
     </div>
     <script src="js/nav.js"></script>
     <script src="/js/index.js"></script>
 </body>
+
 </html>

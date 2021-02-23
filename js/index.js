@@ -10,27 +10,19 @@ let web = new Vue({
         types: [], //分类的标签集合
         allBlogArr: [], //所有博客 allBlogArr[0]为日常所有
         links: [{
-                    "title": "百度一下,你就知道",
+                    "title": "暂无暂无暂无暂无",
                     "url": "https://baidu.com"
                 },
                 {
-                    "title": "百度知道",
+                    "title": "暂无暂无暂无",
                     "url": "https://baidu.com"
                 },
                 {
-                    "title": "百度一道fdsf",
+                    "title": "暂无暂无",
                     "url": "https://baidu.com"
                 },
                 {
-                    "title": "百度一下知道",
-                    "url": "https://baidu.com"
-                },
-                {
-                    "title": "百度一道fdsf",
-                    "url": "https://baidu.com"
-                },
-                {
-                    "title": "百度一下知道",
+                    "title": "暂无暂无暂无",
                     "url": "https://baidu.com"
                 }
             ] //友链
@@ -125,8 +117,8 @@ let web = new Vue({
                         that.typeNum++;
                     }
                     const compare = function(obj1, obj2) {
-                        var val1 = obj1.date;
-                        var val2 = obj2.date;
+                        var val1 = obj1.uid;
+                        var val2 = obj2.uid;
                         if (val1 < val2) {
                             return 1;
                         } else if (val1 > val2) {

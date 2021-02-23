@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <title>Document</title>
+    <title>读后感</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/lib/iconfont.css">
     <link rel="stylesheet" href="/css/nav.css">
@@ -43,16 +43,38 @@
                 </div>
             </div>
             <article>
-                <h1>文章题目</h1>
+                <h1>Docker简单命令 + Docker部署nodejs项目 </h1>
                 <hr>
                 <h3>作者: Cassius</h3>
-                <h3>日期: 2021年2月3日</h3>
-                <h3>写这篇文章的目的</h3>
+                <h3>日期: 2020年11月26日</h3>
+                <h3>这里记录一些我学过的一些知识，不定期更新。 </h3>
                 <hr>
-                <h2>小标题</h2>
-                <p>段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容</p>
-                <h2>小标题</h2>
-                <p>段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容</p>
+                <h2>Docker简单命令</h2>
+                <p><span>sudo su </span> 首先进入root权限 </p>
+                <p><span>docker images</span> 显示docker中的镜像 </p>
+                <p><span>docker ps</span> 显示正在运行的容器</p>
+                <p><span>docker ps -a</span> 显示所有容器(包括不在运行的) </p>
+                <p><span>docker build -t name . </span> 创建一个镜像</p>
+                <p><span>docker run -d -p 8888:8888 imageID</span> 运行容器 8888:8888 代表在8888端口上运行</p>
+                <p><span>docker stop containerID</span> 停止一个容器</p>
+                <p><span>docker rm containerID</span> 删除一个容器</p>
+                <p><span>docker rmi imageID</span> 删除一个镜像</p>
+                <h2>Docker实战</h2>
+                <p>获取docker </p>
+                <p>sudo apt install docker.io </p>
+                <p>sudo systemctl start docker</p>
+                <p>sudo systemctl enable docker</p>
+                <p>docker -v 检查docekr是否安装成功</p>
+                <p><img src="/static/2020/11/blog5-01.png" alt=""></p>
+                <p>安装node</p>
+                <p>sudo docker pull node:latest</p>
+                <p><img src="/static/2020/11/blog5-02.png" alt=""></p>
+                <p>创建文件Dokcerfile</p>
+                <p><img src="/static/2020/11/blog5-03.png" alt=""></p>
+                <p>如下图所示，首先创建相关文件，Dockerfile用来docker构造，server.js和db.js是实现后端接口的文件，package.json是环境所需的依赖。接着使用docker build命令创建一个镜像。用docker run命令运行，最后用docker ps命令查看shifou正在运行。</p>
+                <p><img src="/static/2020/11/blog5-04.png" alt=""></p>
+                <p><img src="/static/2020/11/blog5-05.png" alt=""></p>
+                <p>至此，部署完成，可以通过ip:8888地址访问网页</p>
             </article>
             <div class="cmt">
 

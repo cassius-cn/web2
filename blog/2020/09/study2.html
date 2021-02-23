@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <title>Document</title>
+    <title>Linux学习笔记</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/lib/iconfont.css">
     <link rel="stylesheet" href="/css/nav.css">
@@ -43,16 +43,64 @@
                 </div>
             </div>
             <article>
-                <h1>文章题目</h1>
+                <h1>Linux学习笔记</h1>
                 <hr>
                 <h3>作者: Cassius</h3>
-                <h3>日期: 2021年2月3日</h3>
-                <h3>写这篇文章的目的</h3>
+                <h3>日期: 2020年9月2日</h3>
+                <h3>最基本最常用的20个命令，入门推荐</h3>
                 <hr>
-                <h2>小标题</h2>
-                <p>段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容</p>
-                <h2>小标题</h2>
-                <p>段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容段落内容</p>
+                <h2>1. cat命令</h2>
+                <p> <span> cat fileName</span> 显示文件内容（可以是多个文件）</p>
+                <h2>2. ls命令</h2>
+                <p><span>ls</span> 显示目录下的内容 -l 显示详细的列表 -a显示隐藏文件</p>
+                <h2>3.cp命令</h2>
+                <p><span>cp file1 file2</span> 将文件file1复制到file2（file1必须存在 file2不存在会新建）</p>
+                <h2></h2>
+                <p><span>cp file1 file2 file3 dir</span> 将多个文件 复制到 目录dir中(file和dir必须存在)</p>
+                <h2>4.mv命令</h2>
+                <p><span>mv file1 file2</span> 将file1重命名为file2</p>
+                <p><span>mv file1 file2 file3 dir</span> 将多个文件移动到目录dir下</p>
+                <h2>5.touch命令</h2>
+                <p><span>touch file1
+                </span> 在当前命令下创建一个文件(如果文件已存在 只会改变时间戳 不会改变内容)</p>
+                <h2>6.rm命令</h2>
+                <p><span>rm file1</span> 删除当前目录下的文件（不能删除目录）</p>
+                <h2>7.echo命令</h2>
+                <p><span>echo hello world</span> 输出hello world</p>
+                <p><span>echo '*'</span> 显示*</p>
+                <h2>8.cd命令</h2>
+                <p><span>cd dir</span> 切换到目录dir中</p>
+                <p><span>cd ..</span> 返回上级目录</p>
+                <h2>9.mkdir命令</h2>
+                <p><span>mkdir dir</span> 在当前目录下 新建一个目录dir</p>
+                <h2>10.rmdir命令</h2>
+                <p><span>rmdir dir</span> 移除当前目录下的dir目录（只能删除空目录）</p>
+                <p><span>rmdir -rf dir</span> -r 删除所有子目录和子文件 -f 强制删除</p>
+                <h2>11.shell通配符</h2>
+                <p><span>*通配符</span> echo a* 查找当前目录下 所有a开头的文件 echo *a*所有包含a的文件</p>
+                <h2></h2>
+                <p><span> ？通配符</span> echo te?t.txt 会匹配到 test.txt</p>
+                <h2>12.grep命令</h2>
+                <p><span>grep test /dir1/test1.txt</span> 显示文件中包含文本参数test的所有行</p>
+                <p><span>grep test /dir1/*</span> 显示dir目录下所有文件包含test的所有行</p>
+                <h2>13.less命令</h2>
+                <p><span>less file</span> 分屏显示file文件的内容(空格键下一页 B键上一页 Q键退出)</p>
+                <h2>14.pwd命令</h2>
+                <p><span>pwd</span> 显示当前目录的绝对路径</p>
+                <h2>15.diff命令</h2>
+                <p><span>diff file1 file2</span> 显示该两个文件之间的不同</p>
+                <h2>16.file命令</h2>
+                <p><span>file file1</span> 显示文件的格式信息</p>
+                <h2>17.find和locate命令</h2>
+                <p><span>find dir -name file -print</span> 在目录dir中寻找file文件 locate用法一样（但可能查找不到新文件，因为新的索引还没建立）</p>
+                <h2>18.head和tail命令</h2>
+                <p><span>head file</span> 显示文件前10行内容</p>
+                <p><span> head -6 file</span> 显示文件前6行内容</p>
+                <p><span>tail file</span> 显示文件最后10行内容</p>
+                <h2>19.sort命令</h2>
+                <p><span>sort file</span> 将文件中内容按行开头字母顺序排序 显示出来(文件不变) -n 按数字顺序排序 -r反向排序</p>
+                <h2>20.passwd命令</h2>
+                <p><span>passwd</span> 修改密码 第一遍旧密码 两边新密码</p>
             </article>
             <div class="cmt">
 
